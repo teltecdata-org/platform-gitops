@@ -5,5 +5,4 @@ metadata:
   namespace: {{ .Values.namespace | default "nginx-web" }}
 data:
   default.conf: |
-  
-    {{ .Values.serverBlock }}
+    {{ .Values.serverBlock | nindent 0 }}
